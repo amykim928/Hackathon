@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backicon"
+            android:background="@color/white"
+            android:paddingVertical="8dp"
+            android:paddingLeft="9dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="환경보호 성향 테스트"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="83dp">
+        <LinearLayout
+            android:id="@+id/quizlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/greybackicon"
+                android:background="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이전 문항"
+                android:textColor="#a8a8a8"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/pageText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2/7"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/quizlayout1"
+            android:layout_marginTop="73dp"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘 아침 지구온난화에 관련된 뉴스를\n보았다! 당신의 행동은?"
+            app:layout_constraintTop_toBottomOf="@+id/pageText1"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/titleText"
+            android:layout_marginTop="73dp"
+            android:paddingVertical="18dp"
+            android:background="@drawable/button"
+            android:minHeight="0dp"
+            android:text="친구들에게 관련 내용에 대해 이야기한다."
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/button1"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="18dp"
+            android:background="@drawable/button"
+            android:minHeight="0dp"
+            android:text="그냥 보고 지나친다."
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="18dp"
+            android:background="@drawable/button"
+            android:minHeight="0dp"
+            android:text="관련된 캠페인을 찾아보니 좋은내용들이 많다.\n정기 후원을 한다."
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

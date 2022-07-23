@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-33dp"
+        tools:layout_editor_absoluteY="103dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/white"
+                android:text="생각을 실천으로"
+                android:textColor="#999999"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:text="환경보호 인지형"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleResult" />
+
+            <LinearLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/nameResult">
+
+                <TextView
+                    android:id="@+id/firstTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="6dp"
+                    android:text="#문제인지"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/secondTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/tag"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="6dp"
+                    android:text="#노력필요"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/thirdTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/tag"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="6dp"
+                    android:text="#전문적"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detailResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:text="환경 문제에 대한 심각성을 인지할 수 있지만 직접적으로 실천하는 능력이 부족한 유형으로 실천에 대한 노력이 필요한 사람"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tagLayout" />
+
+            <TextView
+                android:id="@+id/analyzeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="53dp"
+                android:background="@color/white"
+                android:text="성향그래프 분석"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailResult" />
+
+            <ImageView
+                android:id="@+id/imageResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/result"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/analyzeTitle" />
+
+            <TextView
+                android:id="@+id/recTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:text="추천 챌린지"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageResult" />
+
+            <TextView
+                android:id="@+id/recDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="성향에 어울리는 챌린지를 추천합니다"
+                android:textColor="#797979"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recTitle" />
+
+            <LinearLayout
+                android:id="@+id/recLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/recDetailTitle"
+                app:layout_constraintLeft_toLeftOf="parent">
+                <TextView
+                    android:id="@+id/recText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전기 사용량 줄이기"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_gravity="left"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="도전하기"
+                    android:textColor="#82D600"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_gravity="right"
+                    android:paddingRight="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/recLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/recLayout1"
+                app:layout_constraintLeft_toLeftOf="parent">
+                <TextView
+                    android:id="@+id/recText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴지류 사용량 줄이기"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_gravity="left"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="도전하기"
+                    android:textColor="#82D600"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_gravity="right"
+                    android:paddingRight="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/recLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/recLayout2"
+                app:layout_constraintLeft_toLeftOf="parent">
+            <TextView
+                android:id="@+id/recText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분리수거 잘 하기"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_gravity="left"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도전하기"
+                android:textColor="#82D600"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_gravity="right"
+                android:paddingRight="20dp"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/progressBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/recLayout3"
+                android:layout_marginTop="37dp"
+                android:text="테스트 결과 반영하여 그린챌린지 진행하기"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingHorizontal="28dp"
+                android:paddingVertical="18dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/resultbutton"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/homeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/progressBtn"
+                android:layout_marginTop="18dp"
+                android:text="테스트 초기화 후 홈으로 이동"
+                android:textColor="@color/black"
+                android:padding="0dp"
+                android:minHeight="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
